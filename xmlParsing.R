@@ -7,7 +7,7 @@ library(dplyr)
 nullfn <- function(x,...) NULL
 
 
-xt <- xmlTreeParse("~/Desktop/TenneT Project/ttg_data/WEBSERVICE/SMA/archive/20160701000503_sma.xml",
+xt <- xmlTreeParse("20160701000503_sma.xml",
                    handlers = list(Reference = nullfn,Time = nullfn),asTree = TRUE)
 xtList <- xmlToList(xt)
 df <- ldply(xtList,data.frame)
